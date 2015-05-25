@@ -1,12 +1,12 @@
 # accounts-makerpass
 
-A meteor package for [MakerSquare's](http://makersquare.com) MakerPass login system.
+A meteor package for [MakerPass](http://makerpass.com)'s login system.
 
 ## Install
 
 ```
 meteor add accounts-ui
-meteor add makersquare:accounts-makerpass
+meteor add makerpass:accounts-makerpass
 ```
 
 ## Usage
@@ -45,7 +45,7 @@ if (Meteor.isServer) {
     // Here is the data this package gives you
     var mks = user.services.makerpass
 
-    // OPTIONAL: Restrict this app to "official" members of MakerSquare
+    // OPTIONAL: Restrict this app to "official" members of MakerPass
     if (mks.memberships.length === 0) {
       throw new Meteor.Error(401, "Sorry, you are not a member of any MakerPass groups.")
     }
